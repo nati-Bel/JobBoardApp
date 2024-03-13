@@ -1,6 +1,6 @@
 <x-layout>
     <x-breadcrumbs class="mb-4"
-    :links="['Jobs' => route('jobs.index'), $job->title => '#']"/>
+    :links="['Jobs' => route('job.index'), $job->title => '#']"/>
 
     
     <x-job-card :$job>
@@ -16,7 +16,7 @@
                 <div class="mb-4 flex justify-between">
                     <div>
                         <div class="text-slate-700">
-                            <a href="{{route('jobs.show', $otherJob)}}">{{$otherJob->title}}</a>
+                            <a href="{{route('job.show', $otherJob)}}">{{$otherJob->title}}</a>
                         </div>
                         <div class="text-xs">
                             {{$otherJob->created_at->diffForHumans()}}

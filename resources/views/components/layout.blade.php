@@ -13,7 +13,7 @@
             <nav class="mb-8 flex justify-between text-lg font-medium">
                 <ul class="flex space-x-2">
                     <li>
-                        <a href="{{route('jobs.index')}}">Home</a>
+                        <a href="{{route('job.index')}}">Home</a>
                     </li>
                 </ul>
                 <ul class="flex space-x-2">
@@ -38,7 +38,14 @@
                 </ul>
 
             </nav>
-            {{auth()->user()->name ?? 'Guest'}}
+            @if(session('success'))
+                <div role="alert" class="my-8 rounded-md border-l-4 border-green-300 bg-green-100 p-4 text-green-700 opacity-75">
+                    <p class="font-bold">Success!</p>
+                    <p>{{ session('success')}}</p>
+
+                </div>
+
+            @endif
             {{$slot}}
 
         </div>
