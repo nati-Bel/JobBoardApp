@@ -19,6 +19,7 @@
                     No applications
                 @endforelse
 
+                @if (!$job->deleted_at) 
                 <div class="flex space-x-2 mt-2">
                     <x-link-button href="{{route('my-job.edit', $job)}}" >Edit</x-link-button>
                     <form action="{{route('my-job.destroy', $job)}}" method="POST">
@@ -27,6 +28,7 @@
                         <x-button>Delete</x-button>
                     </form>
                 </div>
+                @endif 
 
             </div>
         </x-job-card>
