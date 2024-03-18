@@ -25,16 +25,15 @@
                 </div>
                 <div>
                     <x-label for="experience" :required="true">Experience</x-label>
-                    <x-radio-group name="experience" :allOption="false" :value="$job->experience"
+                    <x-radio-group name="experience" :all-option="false" :value="$job->experience"
                     :options="array_combine(array_map('ucfirst',App\Models\Job::$experience),
                             \App\Models\Job::$experience)"/>
                                                 
                 </div>
-                <div>
+                 <div>
                     <x-label for="category" :required="true">Category</x-label>
-                    <x-radio-group name="experience" :allOption="false" :value="$job->category"/>
-                    <x-radio-group name="category" :allOption="false" 
-                    :options="\App\Models\Job::$category"/>                            
+                    <x-radio-group name="category" :all-option="false" :value="$job->category"
+                        :options="\App\Models\Job::$category" />
                 </div>
                 <div>
                         <x-button class="w-full">Update Job</x-button>

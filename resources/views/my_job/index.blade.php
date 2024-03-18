@@ -19,8 +19,8 @@
                     No applications
                 @endforelse
 
-                <div class="flex space-x-2">
-                    <x-link-button href="{{route('my-job.edit', $job)}}">Edit</x-link-button>
+                <div class="flex space-x-2 mt-2">
+                    <x-link-button href="{{route('my-job.edit', $job)}}" >Edit</x-link-button>
 
                 </div>
 
